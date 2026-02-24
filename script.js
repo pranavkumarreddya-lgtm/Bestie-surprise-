@@ -37,10 +37,20 @@ function showMessage() {
 // Start typing effect
 typeEffect();
 
-// 🔥 Mobile Music Play Fix
-document.body.addEventListener("click", function () {
-  const music = document.getElementById("bgMusic");
-  if (music) {
-    music.play();
+
+// 🔥 PERFECT Music Control
+let musicStarted = false;
+
+function startMusicOnce() {
+  if (!musicStarted) {
+    const music = document.getElementById("bgMusic");
+    if (music) {
+      music.play();
+      musicStarted = true;
+    }
   }
-});
+}
+
+// First user interaction lo ne music start
+document.addEventListener("click", startMusicOnce);
+document.addEventListener("touchstart", startMusicOnce);
