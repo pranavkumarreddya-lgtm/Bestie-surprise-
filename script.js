@@ -34,4 +34,13 @@ function showMessage() {
   document.getElementById("final").classList.remove("hidden");
 }
 
+// Start typing effect
 typeEffect();
+
+// 🔥 Mobile Music Play Fix
+document.body.addEventListener("click", function () {
+  const music = document.getElementById("bgMusic");
+  if (music) {
+    music.play();
+  }
+});
