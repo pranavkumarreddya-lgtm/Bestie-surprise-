@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>For My Bestie 💖</title>
+  <title>Accessing...</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="text-align:center; font-family:Arial; background:pink;">
+<body>
 
-  <h1>Hello Bestie 💕</h1>
-  <p>This is a small surprise for you 😎</p>
+<div id="hacker">
+  <h1>Accessing Bestie Data...</h1>
+  <p id="loading"></p>
+</div>
 
+<div id="slideshow" class="hidden">
+  <h2>Our Memories 💕</h2>
+  <img id="slide" src="pic1.jpg">
+  <br><br>
+  <button onclick="nextSlide()">Next</button>
+</div>
+
+<div id="secret" class="hidden">
+  <h2>Click if you are special 💖</h2>
+  <button onclick="showMessage()">Click Me</button>
+</div>
+
+<div id="final" class="hidden">
+  <h1>You Are The Best Person In My Life 💙</h1>
+  <p>Thank you for being my girl bestie 🥺✨</p>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
