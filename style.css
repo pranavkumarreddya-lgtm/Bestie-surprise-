@@ -2,21 +2,60 @@ body {
   background: black;
   color: lime;
   text-align: center;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+/* Hidden sections */
 .hidden {
   display: none;
 }
 
+/* Slideshow image */
 img {
-  width: 250px;
-  border-radius: 10px;
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px pink;
+  margin-top: 20px;
 }
 
+/* Buttons */
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background: pink;
+  background: hotpink;
+  color: white;
   border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: deeppink;
+}
+
+/* Final Page Fade Effect */
+#final {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Glow effect for name */
+.glow {
+  font-size: 30px;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px pink, 0 0 20px hotpink;
+  }
+  to {
+    text-shadow: 0 0 20px red, 0 0 30px deeppink;
+  }
 }
