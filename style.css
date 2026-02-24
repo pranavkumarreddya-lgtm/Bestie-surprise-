@@ -1,0 +1,22 @@
+body {
+  background: black;
+  color: lime;
+  text-align: center;
+  font-family: Arial;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: pink;
+  border: none;
+}
