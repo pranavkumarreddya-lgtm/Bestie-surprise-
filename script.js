@@ -34,13 +34,11 @@ function showMessage() {
   document.getElementById("final").classList.remove("hidden");
 }
 
-// Start typing
 typeEffect();
 
 
-// 🎵 MUSIC CONTROL
+// 🎵 MUSIC
 let musicStarted = false;
-
 function startMusicOnce() {
   if (!musicStarted) {
     const music = document.getElementById("bgMusic");
@@ -50,27 +48,31 @@ function startMusicOnce() {
     }
   }
 }
-
 document.addEventListener("click", startMusicOnce);
-document.addEventListener("touchstart", startMusicOnce);
 
 
-// ❤️ HEART RAIN ENGINE
+// ❤️ SMOOTH HEART RAIN (Controlled)
+let heartCount = 0;
+
 function createHeart() {
+  if (heartCount > 20) return; // limit max hearts
+
   const heart = document.createElement("div");
   heart.classList.add("heart");
   heart.innerHTML = "❤️";
 
   heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
-  heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+  heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+  heart.style.fontSize = (Math.random() * 10 + 15) + "px";
 
   document.body.appendChild(heart);
+  heartCount++;
 
   setTimeout(() => {
     heart.remove();
-  }, 5000);
+    heartCount--;
+  }, 6000);
 }
 
-// Rain every 300ms
-setInterval(createHeart, 300);
+// slower interval
+setInterval(createHeart, 800);
